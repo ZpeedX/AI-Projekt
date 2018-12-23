@@ -310,15 +310,15 @@ def eval_genomes(genomes, config):
                 closest_dist = current_dist
                 fitness_current +=1
                 counter = 0
-            else:
-                counter +=1
+
+            counter +=1
 
             if current_dist == 0:
                 index += 1
                 (fitness_current, level, done, max_counter, closest_dist) = load_next_level(fitness_current, level, done, max_counter, index, closest_dist)
                 counter = 0
 
-            if done or counter == 50:
+            if done or counter == max_counter:
                 done = True
                 # print(genome_id, fitness_current)
 
