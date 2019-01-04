@@ -1,13 +1,2 @@
-#Main Game Loop
-while True:
-    current_dist = player.distance(treasure.current_pos)
-    if closest_dist > current_dist:
-        closest_dist = current_dist
-        player.points +=1
-
-    print(player.points)
-    player.next_move((0,1), level_1)
-    resetup_maze(level_1)
-    time.sleep(1)
-    #Update screen
-    wn.update()
+with open('winner.pkl', 'rb') as file:
+    genome = pickle.load(file)
