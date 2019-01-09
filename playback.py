@@ -91,7 +91,7 @@ levels.append([
 [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
 ])
 
-counters = 25
+counters = 10
 
 end = len(levels)
 #end = 4
@@ -306,7 +306,7 @@ config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
                      neat.DefaultSpeciesSet, neat.DefaultStagnation,
                      './config-feedforward')
 
-with open('winner.pkl', 'rb') as file:
+with open('winner-old.pkl', 'rb') as file:
     genome = pickle.load(file)
 
 def load_next_level(fitness, level, done, counter, index, closest_dist):

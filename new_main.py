@@ -422,6 +422,7 @@ def eval_genomes(genomes, config):
 
 
 
+
 def whatIsNext(num):
     if num == 1:
         return 0
@@ -442,7 +443,7 @@ config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
                      neat.DefaultSpeciesSet, neat.DefaultStagnation,
                      './config-feedforward')
 
-p = neat.checkpoint.Checkpointer.restore_checkpoint("neat-checkpoint-good-1")
+p = neat.checkpoint.Checkpointer.restore_checkpoint("neat-checkpoint-3103")
 #p = neat.Population(config)
 
 p.add_reporter(neat.StdOutReporter(True))
