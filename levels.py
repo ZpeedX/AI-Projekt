@@ -2,8 +2,8 @@
 levels = []
 #Below are different types of game maps.
 #Some are used for training and the rest is used for testing.
-# 0 - free
-# 1 - wall
+# 0 - free space
+# 1 - wall/obstacle
 # 2 - player
 # 3 - treasure
 levels.append([

@@ -138,7 +138,9 @@ with open('winner.pkl', 'rb') as file:
     genome = pickle.load(file)
 
 #Load the configuration on the neural network.
-#The configuration is located in the 'config-feedforward' file
+#The configuration is located in the 'config-feedforward' file.
+#The configuration file contains values which detemines the structure of the neural network and
+#how it will train itself.
 config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
                      neat.DefaultSpeciesSet, neat.DefaultStagnation,
                      './config-feedforward')
