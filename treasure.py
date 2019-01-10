@@ -3,7 +3,7 @@ import math
 import random
 import neat
 
-#Create Tresure
+#Treasure class representing a treasure in the game map
 class Treasure(turtle.Turtle):
     def __init__(self):
         turtle.Turtle.__init__(self)
@@ -13,6 +13,7 @@ class Treasure(turtle.Turtle):
         self.speed(0)
         self.current_pos = (0,0)
 
+    #Remove the treasure from the game map
     def destroy(self):
         self.clear()
         self.hideturtle()

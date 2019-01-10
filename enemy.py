@@ -3,6 +3,8 @@ import math
 import random
 import neat
 
+#Deprecated
+#This class was planned to be implemented in the main game but was scrapped from the project
 class Enemy(turtle.Turtle):
     def __init__(self, x, y):
         turtle.Turtle.__init__(self)

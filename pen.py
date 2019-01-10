@@ -3,7 +3,7 @@ import math
 import random
 import neat
 
-#Create Pen
+#Pen Class representing walls/obstacles
 class Pen(turtle.Turtle):
     def __init__(self):
         turtle.Turtle.__init__(self)

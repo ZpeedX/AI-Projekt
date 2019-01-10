@@ -3,6 +3,7 @@ import math
 import random
 import neat
 
+#Player Class representing a player in the game which uses turtle module two draw the player in the game map
 class Player(turtle.Turtle):
     def __init__(self):
         turtle.Turtle.__init__(self)
@@ -10,15 +11,13 @@ class Player(turtle.Turtle):
         self.color("blue")
         self.penup()
         self.speed(0)
-        self.lives = 3
         self.current_pos = (1,1)
-        self.points = 0
 
+    #Move the player to its desired postion which one step in the loaded game map
     def next_move(self, input, level):
         self_x = self.current_pos[0]
         self_y = self.current_pos[1]
         end = False
-
 
         if input == 2:
             end = self.is_blocked((self_x+1, self_y), level)
@@ -31,7 +30,7 @@ class Player(turtle.Turtle):
 
         return end
 
-
+    #Check if the player is blocked by an obstacle
     def is_blocked(self, next_pos, level):
         if level[next_pos[1]][next_pos[0]] == 0:
             level[self.current_pos[1]][self.current_pos[0]] = 0
@@ -51,6 +50,7 @@ class Player(turtle.Turtle):
 
         return False
 
+    #Calcuate the distance between the player and an object (treasure)
     def distance(self, other):
         a = self.current_pos[0]-other[0]
         b = self.current_pos[1]-other[1]
@@ -58,6 +58,7 @@ class Player(turtle.Turtle):
 
         return distance
 
+    #return the distance in (x,y) form between the player and an object (treasure)
     def dist(self, other):
         width = self.current_pos[0]-other[0]
         height = self.current_pos[1]-other[1]
