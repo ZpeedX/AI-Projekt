@@ -5,14 +5,14 @@ To do this, we used the NEAT neural network algorithm implemented in python to t
 
 
 # 1. Map design
-<img src="https://gits-15.sys.kth.se/saboo/AI-Projekt/blob/master/images/architecture.png" width="500">
+<img src="https://github.com/ZpeedX/AI-Projekt/blob/master/images/architecture.png" width="500">
 The idea of the map is that the agent, pictured above as the blue square, tries to navigate to the yellow goal while avoiding the black blocks.
 This could ultimately be used as a hostile AI, where the agent can receive input values to navigate toward a "sound" or a player, 
 which it can then chase until it is reached/aborted.
 
 
 # 2. Neural network
-<img src="https://gits-15.sys.kth.se/saboo/AI-Projekt/blob/master/images/architecture-player.png" width="500">
+<img src="https://github.com/ZpeedX/AI-Projekt/blob/master/images/architecture-player.png" width="500">
 The topology above was used, where the NEAT algorithm progressively added new nodes and connections to the network as the net was learning. 
 By using the input structure of X and Y axis inputs for both which squares are free and which direction the treasure is in, 
 the agent could navigate on all possible map structures.
